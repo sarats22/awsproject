@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Generic Travel website</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <style>
+            div.gallery {
+              margin: 5px;
+              border: 1px solid #ccc;
+              float: left;
+              width: 300px;
+            }
+            
+            div.gallery:hover {
+              border: 1px solid #777;
+            }
+            
+            div.gallery img {
+              width: 100%;
+              height: auto;
+            }
+            
+            div.desc {
+              padding: 50px;
+              text-align: center;
+            }
+        </style>
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light navbar-expand-md"> <a class="navbar-brand" href="#">Generic Travel Website</a>
+        <ul class="nav navbar-nav">
+            <li class="active nav-item"><a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item"><a href="showSignUp" class="nav-link">Signup</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="header">
+            <nav class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                </div>
+            </nav>
+        </div>
+
+        <div class="jumbotron" style='text-align: center'>
+            <h3>We serve to get you the best experience wherever you go!</h3>
+        </div>
+
+        <form id="searchForm">
+          <div class="row">
+            <div class="col">
+                    <label for="exampleFormControlSelect1">Location</label>
+                    <select class="form-control" id="location" name="location">
+                        <option value="lachen">Lachen, Sikkim</option>
+                        <option value="himalayas">Himalayas, India</option>
+                        <option value="tokyo">Tokyo, Japan</option>
+                        <option value="pondi">Pondicherry, India</option>
+                    </select>
+                </div>
+          </div>
+          <br/>
+          <div class="row">
+                <div class="col">
+                    <label for="example-date-input" class=" col-form-label">Check in date</label>
+                    <input class="form-control" type="date" value="2020-08-19" id="checkindate">
+                </div>
+                <div class="col">
+                    <label for="example-date-input" class="col-form-label">Check out date</label>
+                    <input class="form-control" type="date" value="2020-08-19" id="checkoutdate">
+                </div>
+            </div>
+          <br/>
+          <div class="row">
+            <div class="col">
+                <label for="exampleFormControlSelect1">Number of Adults</label>
+                <select class="form-control" id="numAdults" name="numAdults">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="exampleFormControlSelect1">Number of Children</label>
+                <select class="form-control" id="numChildren" name="numChildren">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="exampleFormControlSelect1">Number of Infants</label>
+                <select class="form-control" id="numInfants" name="numInfants">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+          </div>
+          <br/>
+          <div style="text-align: center">
+                <button type="submit" id="submitSearch" style = "align-self: center" class="btn btn-primary">Search</button>
+         </div>
+
+          
+        </form>
+        
+        <br/>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                        <figure class="figure">
+                                <img src="static/images/village.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                                <figcaption class="figure-caption">A beautiful calm experience at the village.</figcaption>
+                                </figure>
+                </div>
+                <div class="col-md">
+                        <figure class="figure">
+                                <img src="static/images/himalayas.jpeg" style="
+                                height: 400px;
+                                width: 95%;
+                            " class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                                <figcaption class="figure-caption">An amazing sight to see in the most beautiful mountains.</figcaption>
+                            </figure>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                            
+                    <figure class="figure">
+                            <img src="static/images/tokyo.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                            <figcaption class="figure-caption">A new experience filled with lots of new people and places.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md">
+                            <figure class="figure">
+                                    <img src="static/images/cabin2.jpg" style="
+                                    height: 380px;
+                                    width: 500px;
+                                " class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                                    <figcaption class="figure-caption">An isolated night for your family.</figcaption>
+                                </figure>
+                    </div>
+                </div>
+            </div>
+        
+        
+        
+        
+        
+                          
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row">
+                <div class="col-12 col-md">
+                <small class="d-block mb-3 text-muted">&copy; 2020-2021</small>
+                </div>
+                <div class="col-6 col-md">
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Cool stuff</a></li>
+                    <li><a class="text-muted" href="#">Random feature</a></li>
+                    <li><a class="text-muted" href="#">Team feature</a></li>
+                    <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                    <li><a class="text-muted" href="#">Another one</a></li>
+                    <li><a class="text-muted" href="#">Last time</a></li>
+                </ul>
+                </div>
+                <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Resource</a></li>
+                    <li><a class="text-muted" href="#">Resource name</a></li>
+                    <li><a class="text-muted" href="#">Another resource</a></li>
+                    <li><a class="text-muted" href="#">Final resource</a></li>
+                </ul>
+                </div>
+                <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Team</a></li>
+                    <li><a class="text-muted" href="#">Locations</a></li>
+                    <li><a class="text-muted" href="#">Privacy</a></li>
+                    <li><a class="text-muted" href="#">Terms</a></li>
+                </ul>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script>
+        $(document).ready(() => {
+	    $('form').submit(false);
+            $("#submitSearch").click(function(){
+                $.ajax('/searchSubmit',{
+                    type: 'POST',
+                    data:
+                    {
+                        'location':$('#location').val(),
+                        'numChildren':$('#numChildren').val(),
+                        'numAdults':$('#numAdults').val(),
+                        'numInfants':$('#numInfants').val(),
+                        'checkindate':$('#checkindate').val(),
+                        'checkoutdate':$('#checkoutdate').val(),
+                    
+                    },
+                    success:function(data, status, xhr){
+                        window.location=data;
+                    }
+                
+                }
+                
+                )
+            })
+        })
+    </script>
+</body>
+
+</html>
